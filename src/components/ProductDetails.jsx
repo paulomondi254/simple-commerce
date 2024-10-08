@@ -20,7 +20,7 @@ export const ProductDetails = () => {
 	return (
 		<>
 			<Container>
-				<div className="w-full min-h-[100vh] flex justify-center items-center">
+				<div className="w-full min-h-[90vh] flex justify-center items-center">
 					<div className="py-5">
 						<div className="grid grid-cols-1 md:grid-cols-2 gap-5">
 							<div>
