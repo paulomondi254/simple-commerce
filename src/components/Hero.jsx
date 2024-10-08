@@ -38,4 +38,3 @@ export const Hero = () => {
 		</>
 	);
 };
-// w-[300px] md:w-[300px] lg:w-[500px]
