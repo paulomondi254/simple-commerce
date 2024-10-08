@@ -29,7 +29,7 @@ export const Products = () => {
 								product.category === "jewelery" ||
 								product.category === "electronics" ? null : (
 									<div key={product.id} className="shadow-md rounded-md py-4">
-										<Link>
+										<Link to={"/product/" + product.id}>
 											<div>
 												<div>
 													<img
