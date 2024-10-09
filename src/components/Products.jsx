@@ -12,7 +12,6 @@ export const Products = () => {
 			.then((data) => setProducts(data))
 			.catch((err) => console.log(err));
 	}, []);
-	console.log(products);
 	return (
 		<>
 			<Container>

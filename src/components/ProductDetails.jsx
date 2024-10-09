@@ -1,12 +1,13 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { Container } from "./Container";
 import { Tag } from "./Tag";
-import { Button } from "./Button";
+import { CartContext } from "../contexts/CartProvider";
 
 export const ProductDetails = () => {
 	const params = useParams();
 	const [product, setProduct] = useState({});
+	const { addToCart } = useContext(CartContext);
 
 	useEffect(() => {
 		fetch(`https://fakestoreapi.com/products/${params.id}`)
@@ -14,8 +15,6 @@ export const ProductDetails = () => {
 			.then((data) => setProduct(data))
 			.catch((err) => console.log(err));
 	}, [params.id]);
-
-	console.log(product);
 
 	return (
 		<>
@@ -49,7 +48,12 @@ export const ProductDetails = () => {
 										</p>
 									</div>
 									<div>
-										<Button>Add to Cart</Button>
+										<button
+											onClick={() => addToCart(product)}
+											className="bg-black py-3 px-7 text-white rounded-md font-semibold"
+										>
+											Add to Cart
+										</button>
 									</div>
 								</div>
 							</div>

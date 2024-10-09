@@ -11,6 +11,7 @@ import { AppLayout } from "./layouts/AppLayout.jsx";
 import { Home } from "./pages/Home.jsx";
 import { ProductDetails } from "./components/ProductDetails.jsx";
 import { ChakraProvider } from "@chakra-ui/react";
+import { CartProvider } from "./contexts/CartProvider.jsx";
 
 const router = createBrowserRouter(
 	createRoutesFromElements(
@@ -24,7 +25,9 @@ const router = createBrowserRouter(
 createRoot(document.getElementById("root")).render(
 	<StrictMode>
 		<ChakraProvider>
-			<RouterProvider router={router} />
+			<CartProvider>
+				<RouterProvider router={router} />
+			</CartProvider>
 		</ChakraProvider>
 	</StrictMode>
 );
