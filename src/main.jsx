@@ -10,6 +10,7 @@ import {
 import { AppLayout } from "./layouts/AppLayout.jsx";
 import { Home } from "./pages/Home.jsx";
 import { ProductDetails } from "./components/ProductDetails.jsx";
+import { ChakraProvider } from "@chakra-ui/react";
 
 const router = createBrowserRouter(
 	createRoutesFromElements(
@@ -22,6 +23,8 @@ const router = createBrowserRouter(
 
 createRoot(document.getElementById("root")).render(
 	<StrictMode>
-		<RouterProvider router={router} />
+		<ChakraProvider>
+			<RouterProvider router={router} />
+		</ChakraProvider>
 	</StrictMode>
 );

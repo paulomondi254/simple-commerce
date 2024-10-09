@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Container } from "./Container";
 import { SiCssdesignawards } from "react-icons/si";
-import { HiOutlineShoppingBag } from "react-icons/hi2";
+import { Cart } from "./Cart";
 
 export const Navbar = () => {
 	return (
@@ -17,16 +17,7 @@ export const Navbar = () => {
 								</p>
 							</div>
 						</Link>
-						<div className="relative cursor-pointer">
-							<button>
-								<HiOutlineShoppingBag className="font-bold text-3xl" />
-							</button>
-							<div>
-								<div className="absolute right-0 bottom-[0] bg-red-600 w-[18px] h-[18px] rounded-full flex justify-center items-center font-semibold text-white text-xs">
-									0
-								</div>
-							</div>
-						</div>
+						<Cart />
 					</div>
 				</div>
 			</Container>
