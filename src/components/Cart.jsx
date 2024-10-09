@@ -40,29 +40,36 @@ export const Cart = () => {
 					</DrawerHeader>
 					<DrawerBody>
 						<div>
-							{cart.map((cartItem) => (
-								<div key={cartItem.id} className="grid grid-cols-4 gap-4 mb-4">
-									<div>
-										<img
-											className="w-full h-[80px] object-contain"
-											src={cartItem.image}
-											alt={cartItem.title}
-										/>
-									</div>
-									<div className="col-span-2">{cartItem.title}</div>
-									<div>
+							{cart.length === 0 ? (
+								<p>Your Cart is Empty</p>
+							) : (
+								cart.map((cartItem) => (
+									<div
+										key={cartItem.id}
+										className="grid grid-cols-4 gap-4 mb-4"
+									>
 										<div>
-											<Button
-												size="xs"
-												onClick={() => removeFromCart(cartItem.id)}
-											>
-												<IoClose className="text-lg" />
-											</Button>
-											<p className="pt-3 font-semibold">${cartItem.price}</p>
+											<img
+												className="w-full h-[80px] object-contain"
+												src={cartItem.image}
+												alt={cartItem.title}
+											/>
+										</div>
+										<div className="col-span-2">{cartItem.title}</div>
+										<div>
+											<div>
+												<Button
+													size="xs"
+													onClick={() => removeFromCart(cartItem.id)}
+												>
+													<IoClose className="text-lg" />
+												</Button>
+												<p className="pt-3 font-semibold">${cartItem.price}</p>
+											</div>
 										</div>
 									</div>
-								</div>
-							))}
+								))
+							)}
 						</div>
 					</DrawerBody>
 					<DrawerFooter>
