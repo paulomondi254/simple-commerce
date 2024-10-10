@@ -32,3 +32,5 @@ Simple Commerce is a simple and intuitive e-commerce platform developed using Re
 ### Ipad
 
 ![ipad preview](public/images/previews/ipad.PNG)
+
+Currently pausing on this project. I will continue working on it in future but I hope it can be of help to someone and you can feel free to clone it, edit it and even add more features because I have left alot out.
